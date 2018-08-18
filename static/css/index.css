@@ -1,0 +1,6 @@
+.section1 {
+	height: calc(100vh-70px);
+	width: 100vh;
+	text-align: center;
+	background: url('../img/landing.jpeg');
+}
