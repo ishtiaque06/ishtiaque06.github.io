@@ -1,4 +1,101 @@
-.navbar {
-	background: transparent;
-	height: 70px;
+body {
+	font-size: 24px;
+	background:	url('../img/landing.jpeg');
+	background-size: auto 100%;
 }
+
+/*
+AI-------------------------------------------------------------------
+	Wrapper for all body components
+-------------------------------------------------------------------AI
+*/
+.content-container {
+	padding: 200px 0 0 0;
+}
+
+/*
+AI-------------------------------------------------------------------
+	NavBar Styles
+-------------------------------------------------------------------AI
+*/
+
+/*The following is for the NavBar whose size changes with scroll*/
+#stock-nav {
+	position: fixed;
+	top: 0;
+	z-index: 10000;
+	height: 150px;
+	line-height: 150px;
+	width: 100%;
+	color: white;
+}
+
+#stock-nav:after {
+	filter: blur(10px);
+}
+
+.scrolled-nav {
+	height: 60px!important;
+	line-height: 60px!important;
+}
+
+.scrolled-nav .nav-list {
+	font-size: 20px;
+}
+
+/*NavBar item CSS*/
+.nav-list {
+	display: inline-block;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+/*The following is style settings for CSS underline on nav links upon hover*/
+
+div a:before {
+	content:"";
+	position: absolute;
+	background-color: white;
+	visibility: hidden;
+	width: 100%;
+  	height: 5px;
+  	bottom: 0;
+	-webkit-transform: scaleX(0);
+  	transform: scaleX(0);
+  	-webkit-transition: all 0.3s ease-in-out 0s;
+  	transition: all 0.3s ease-in-out 0s;
+}
+
+div a {
+	color: white;
+	text-decoration: none;
+	transition: 0.5s;
+	position: relative;
+}
+
+div a:hover:before {
+	visibility: visible;
+	-webkit-transform: scaleX(1.5);
+	transform: scaleX(1.5);
+}
+
+div a:hover {
+	text-decoration: none;
+	color: white;
+}
+
+/*
+AI-------------------------------------------------------------------
+	Header fonts
+-------------------------------------------------------------------AI
+*/
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Bitter', serif;
+}
+
+
+
+
+
+
+
