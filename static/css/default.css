@@ -1,7 +1,8 @@
 body {
 	font-size: 24px;
 	background:	url('../img/landing.jpeg');
-	background-size: auto 100%;
+	background-size: auto 100%!important;
+	font-family: 'Bitter', serif;
 }
 
 /*
@@ -27,24 +28,30 @@ AI-------------------------------------------------------------------
 	height: 150px;
 	line-height: 150px;
 	width: 100%;
-	color: white;
+	-webkit-transition: height .5s, line-height .5s; /* Safari */
+    transition: height .5s, line-height .5s;
+	background: rgba(0, 0, 0, 0.2);
 }
 
-#stock-nav:after {
-	filter: blur(10px);
-}
-
+/*When the user scrolls 100px, this class is added to the NavBar.*/
 .scrolled-nav {
 	height: 60px!important;
 	line-height: 60px!important;
 }
 
-.scrolled-nav .nav-list {
+/*Each link in the scrolled nav has this font size.*/
+.scrolled-nav .navbar-list-item {
 	font-size: 20px;
 }
 
-/*NavBar item CSS*/
-.nav-list {
+/*
+AI-------------------------------------------------------------------
+	For viewports greater than 786px, these classes apply on the 
+	NavBar.
+-------------------------------------------------------------------AI
+*/
+.navbar-list-item {
+	text-align: left;
 	display: inline-block;
 	padding-left: 40px;
 	padding-right: 40px;
@@ -52,50 +59,127 @@ AI-------------------------------------------------------------------
 
 /*The following is style settings for CSS underline on nav links upon hover*/
 
-div a:before {
+.navbar-link:before {
 	content:"";
 	position: absolute;
 	background-color: white;
 	visibility: hidden;
 	width: 100%;
   	height: 5px;
-  	bottom: 0;
+  	bottom: -5px;
 	-webkit-transform: scaleX(0);
   	transform: scaleX(0);
   	-webkit-transition: all 0.3s ease-in-out 0s;
   	transition: all 0.3s ease-in-out 0s;
 }
 
-div a {
+.navbar-link {
 	color: white;
 	text-decoration: none;
 	transition: 0.5s;
-	position: relative;
+	position: relative;	
 }
 
-div a:hover:before {
+.navbar-link:hover:before {
 	visibility: visible;
 	-webkit-transform: scaleX(1.5);
 	transform: scaleX(1.5);
 }
 
-div a:hover {
+.navbar-link:hover {
 	text-decoration: none;
 	color: white;
 }
 
 /*
 AI-------------------------------------------------------------------
-	Header fonts
+	NavBar List for smaller viewports
 -------------------------------------------------------------------AI
 */
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Bitter', serif;
+
+#sm-navbar-list {
+	display: none;
+	text-align: center;
+	width: 100vw;
+	height: 75vh;
+}
+
+/*Hamburger SVG settings.*/
+#hamburger {
+	fill: white;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 20px;
+	transition: 0.5s;
+}
+
+.sm-navbar-list-item {
+	width: 100vw;
+	height: 20vh;
+}
+
+/*Links in the NavBar have these attributes.*/
+.sm-navbar-link:before {
+	content:"";
+	position: absolute;
+	background-color: black;
+	visibility: hidden;
+	width: 100%;
+  	height: 5px;
+  	bottom: -5px;
+	-webkit-transform: scaleX(0);
+  	transform: scaleX(0);
+  	-webkit-transition: all 0.3s ease-in-out 0s;
+  	transition: all 0.3s ease-in-out 0s;
+}
+
+.sm-navbar-link {
+	color: black;
+	text-decoration: none;
+	transition: 0.5s;
+	position: relative;	
+}
+
+.sm-navbar-link:hover:before {
+	visibility: visible;
+	-webkit-transform: scaleX(1.5);
+	transform: scaleX(1.5);
+}
+
+.sm-navbar-link:hover {
+	text-decoration: none;
+	color: black;
 }
 
 
+/*
+AI-------------------------------------------------------------------
+Media Queries for Responsive Design
+-------------------------------------------------------------------AI
+*/
+@media only screen and (max-width: 768px) {
+	#navbar-list {
+		display: none;
+	}
+	.svg-container {
+		display: block!important;
+	}
+	#sm-navbar-list {
+		display: none;
+	}
+}
 
+@media only screen and (min-width: 769px) {
+	.svg-container {
+		display: none;
+	}
 
+	#sm-navbar-list {
+		display: none!important;
+	}
 
-
+	#navbar-list {
+		display: inline-block!important;
+	}
+}
 
