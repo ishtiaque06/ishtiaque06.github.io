@@ -1,17 +1,15 @@
-body {
-	font-size: 24px;
-	background:	url('../img/landing.jpeg');
-	background-size: auto 100%!important;
-	font-family: 'Bitter', serif;
-}
-
 /*
 AI-------------------------------------------------------------------
-	Wrapper for all body components
+	Color palette
+
+	Red: #ff3B3f
+	Off-white: #fbffe6
+	Green: #1f7e92
 -------------------------------------------------------------------AI
 */
-.content-container {
-	padding: 200px 0 0 0;
+
+body {
+	font-family: 'Montserrat', sans-serif;
 }
 
 /*
@@ -25,9 +23,9 @@ AI-------------------------------------------------------------------
 	position: fixed;
 	top: 0;
 	z-index: 10000;
-	height: 150px;
-	line-height: 150px;
-	width: 100%;
+	height: 4em;
+	line-height: 4em;
+	width: 100vw;
 	-webkit-transition: height .5s, line-height .5s; /* Safari */
     transition: height .5s, line-height .5s;
 	background: rgba(0, 0, 0, 0.2);
@@ -35,13 +33,13 @@ AI-------------------------------------------------------------------
 
 /*When the user scrolls 100px, this class is added to the NavBar.*/
 .scrolled-nav {
-	height: 60px!important;
-	line-height: 60px!important;
+	height: 3em!important;
+	line-height: 3em!important;
 }
 
 /*Each link in the scrolled nav has this font size.*/
 .scrolled-nav .navbar-list-item {
-	font-size: 20px;
+	font-size: 0.8em;
 }
 
 /*
@@ -51,10 +49,11 @@ AI-------------------------------------------------------------------
 -------------------------------------------------------------------AI
 */
 .navbar-list-item {
+	font-size: 1em;
 	text-align: left;
 	display: inline-block;
-	padding-left: 40px;
-	padding-right: 40px;
+	padding-left: 2em;
+	padding-right: 2em;
 }
 
 /*The following is style settings for CSS underline on nav links upon hover*/
@@ -106,14 +105,16 @@ AI-------------------------------------------------------------------
 
 /*Hamburger SVG settings.*/
 #hamburger {
-	fill: white;
+	fill: #fbffe6;
 	margin-top: 5px;
 	margin-bottom: 5px;
 	margin-left: 20px;
 	transition: 0.5s;
+	font-size: 5em;
 }
 
 .sm-navbar-list-item {
+	font-size: 1.5em;
 	width: 100vw;
 	height: 20vh;
 }
@@ -122,7 +123,7 @@ AI-------------------------------------------------------------------
 .sm-navbar-link:before {
 	content:"";
 	position: absolute;
-	background-color: black;
+	background-color: #1f7e92;
 	visibility: hidden;
 	width: 100%;
   	height: 5px;
@@ -134,7 +135,7 @@ AI-------------------------------------------------------------------
 }
 
 .sm-navbar-link {
-	color: black;
+	color: #fbffe6;
 	text-decoration: none;
 	transition: 0.5s;
 	position: relative;	
@@ -144,11 +145,12 @@ AI-------------------------------------------------------------------
 	visibility: visible;
 	-webkit-transform: scaleX(1.5);
 	transform: scaleX(1.5);
+	background-color: #fbffe6;
 }
 
 .sm-navbar-link:hover {
 	text-decoration: none;
-	color: black;
+	color: #fbffe6;
 }
 
 
@@ -157,7 +159,63 @@ AI-------------------------------------------------------------------
 Media Queries for Responsive Design
 -------------------------------------------------------------------AI
 */
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 376px) {
+	body {
+		font-size: 12px;
+	}
+
+	#navbar-list {
+		display: none;
+	}
+
+	.svg-container {
+		display: block!important;
+	}
+}
+
+@media only screen and (max-width: 376px) and (min-height: 730px) {
+	body {
+		font-size: 15px;
+	}
+
+	#navbar-list {
+		display: none;
+	}
+
+	.svg-container {
+		display: block!important;
+	}
+}
+
+@media only screen and (min-width: 376px) and (max-width: 425px) {
+	body {
+		font-size: 13px;
+	}
+
+	#navbar-list {
+		display: none;
+	}
+
+	.svg-container {
+		display: block!important;
+	}
+}
+
+@media only screen and (min-width: 425px) and (max-width: 549px) {
+	body {
+		font-size: 14px;
+	}
+	#navbar-list {
+		display: none;
+	}
+
+	.svg-container {
+		display: block!important;
+	}
+}
+
+@media only screen and (min-width: 550px) and (max-width: 768px) {
 	#navbar-list {
 		display: none;
 	}
@@ -166,6 +224,9 @@ Media Queries for Responsive Design
 	}
 	#sm-navbar-list {
 		display: none;
+	}
+	body {
+		font-size: 16px;
 	}
 }
 
@@ -181,5 +242,19 @@ Media Queries for Responsive Design
 	#navbar-list {
 		display: inline-block!important;
 	}
+	body {
+		font-size: 20px;
+	}
 }
 
+@media only screen and (min-width: 1024px) {
+	body {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	body {
+		font-size: 24px;
+	}
+}

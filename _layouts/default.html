@@ -19,14 +19,28 @@
 		===========================================================AI-->
 		<link rel="stylesheet" href="../static/css/default.css">
 		<link rel="stylesheet" href="../static/css/index.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" 
+		rel="stylesheet">
+
+		<!--JQuery-->
+		<script
+		  src="https://code.jquery.com/jquery-3.3.1.min.js"
+		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		  crossorigin="anonymous">
+		</script>
+
+		<!--FontAwesome-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+		integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" 
+		crossorigin="anonymous">
 	</head>
 
 	<body>
 		<nav class="nav flex-lg-column" id="stock-nav">
 			<div class="svg-container">
-				<svg id="hamburger" height="50px" id="Layer_1" 
+				<svg id="hamburger" height="0.5em" id="Layer_1" 
 					style="enable-background:new 0 0 32 32;" version="1.1" 
-					viewBox="0 0 32 32" width="50px" xml:space="preserve" 
+					viewBox="0 0 32 32" width="0.5em" xml:space="preserve" 
 					xmlns="http://www.w3.org/2000/svg" 
 					xmlns:xlink="http://www.w3.org/1999/xlink">
 					<path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,
@@ -36,9 +50,9 @@
 					2-2  S29.104,22,28,22z"/>
 				</svg>
 			</div>
-  			<div class="container"id="navbar-list">
+  			<div class="container" id="navbar-list">
   				<div class="navbar-list-item">
-  					<a href="#" class="navbar-link">Home</a>
+  					<a href="/" class="navbar-link">Home</a>
   				</div>
   				<div class="navbar-list-item float-right">
   					<a href="#" class="navbar-link">Resume</a>
@@ -60,19 +74,14 @@
   			</div>
 
 		</nav>
+		<!--Website Content start-->
+		{{ content }}
 
-		<div class="content-container">
-			{{ content }}
-		</div>
+		<!--Website Content end-->
+
 		<!--AI==========================================================
 			Bootstrap, JQuery and PopperJS 
 		===========================================================AI-->
-
-		<!--JQuery-->
-		<script
-		  src="https://code.jquery.com/jquery-3.3.1.min.js"
-		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-		  crossorigin="anonymous"></script>
 
   		<!--JQuery Color-->
   		<script

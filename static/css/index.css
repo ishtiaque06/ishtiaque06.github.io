@@ -1,7 +1,209 @@
-.section-1 {
-	height: 100vh;
-	width: 100vw;
+/*
+AI-------------------------------------------------------------------
+	Color palette
+
+	Red: #ff3b3f
+	Off-white: #fbffe6
+	Green: #1f7e92
+-------------------------------------------------------------------AI
+*/
+
+/*
+AI-------------------------------------------------------------------
+	Generic section settings
+-------------------------------------------------------------------AI
+*/
+section {
+	background: #fbffe6;
 	text-align: center;
-	color: white;
-	font-family: 'Bitter', serif;
+	padding-top: 5em;
+	padding-bottom: 3em;
+	padding-left: 3.5em;
+	padding-right: 3.5em;
+	box-shadow: 0 0 5px black;
+	height: 100vh;
+	color: #1f7e92;
+	overflow: auto;
+}
+
+
+/*
+AI-------------------------------------------------------------------
+	Each Section has its own background settings.
+-------------------------------------------------------------------AI
+*/
+
+#about {
+	background: url('../img/content-portrait.png');
+	background-size: 100% 100%;
+}
+
+#likes {
+	background: url('../img/content-2-portrait.png');
+	background-size: 100% 100%;
+}
+
+#projects {
+	background: url('../img/content-3-portrait.png');
+	background-size: 100% 100%;
+	padding-bottom: 2em;
+	height: auto;
+}
+
+#contact {
+	background: url('../img/content-4-portrait.png');
+	background-size: 100% 100%;
+}
+
+/*
+AI-------------------------------------------------------------------
+	Depending on the text type, certain rules are applied.
+-------------------------------------------------------------------AI
+*/
+.heading {
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	font-size: 2.5em;
+}
+
+.subheading {
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	font-size: 1.8em;
+}
+
+.section-desc {
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	font-size: 1.2em;
+}
+
+/*
+AI-------------------------------------------------------------------
+	CSS animation on items that animate on the page.
+-------------------------------------------------------------------AI
+*/
+.slide-left {
+	opacity: 0;
+ 	-moz-transition: all 500ms linear;
+  	-webkit-transition: all 500ms linear;
+  	-o-transition: all 500ms linear;
+ 	transition: all 500ms linear;
+  	-moz-transform: translate3d(-100px, 0px, 0px);
+  	-webkit-transform: translate3d(-100px, 0px, 0px);
+  	-o-transform: translate(-100px, 0px);
+  	-ms-transform: translate(-100px, 0px);
+  	transform: translate3d(-100px, 0px, 0px);
+}
+
+.slide-right {
+	opacity: 0;
+ 	-moz-transition: all 500ms linear;
+  	-webkit-transition: all 500ms linear;
+  	-o-transition: all 500ms linear;
+ 	transition: all 500ms linear;
+  	-moz-transform: translate3d(100px, 0px, 0px);
+  	-webkit-transform: translate3d(100px, 0px, 0px);
+  	-o-transform: translate(100px, 0px);
+  	-ms-transform: translate(100px, 0px);
+  	transform: translate3d(100px, 0px, 0px);
+}
+
+.in-view {
+	opacity: 1;
+	-moz-transform: translate3d(0px, 0px, 0px);
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	-o-transform: translate(0px, 0px);
+	-ms-transform: translate(0px, 0px);
+	transform: translate3d(0px, 0px, 0px);
+}
+
+/*
+AI-------------------------------------------------------------------
+	CSS for links that point to my profiles on external sites.
+-------------------------------------------------------------------AI
+*/
+.links-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.links-out {
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	text-align: center;
+}
+
+.fab, .fas {
+	color: #1f7e92;
+	transition: 0.5s ease-in;
+}
+
+.fa-envelope {
+	padding-top: 0.1em;
+}
+
+.fab:hover, .fas:hover {
+	color: #ff3b3f;
+}
+
+/*
+AI-------------------------------------------------------------------
+Media Queries for Responsive Design
+-------------------------------------------------------------------AI
+*/
+
+/*For phones with a narrow but long viewport*/
+@media only screen and (max-width: 376px) and (min-height: 730px) {
+	section {
+		padding-right: 3.5em;
+		padding-left: 3.5em;
+	}
+}
+
+@media only screen and (min-width: 376px) and (max-width: 425px) {
+}
+
+@media only screen and (min-width: 425px) and (max-width: 549px) {
+}
+
+@media only screen and (min-width: 550px) and (max-width: 768px) {
+	section {
+		padding-right: 4em;
+		padding-left: 4em;
+	}
+}
+
+@media only screen and (min-width: 769px) {
+}
+
+@media only screen and (min-width: 1024px) {
+	section {
+		padding-top: 4em;
+	}
+	#about {
+	background: url('../img/content-landscape.png');
+	background-size: 100% 100%;
+	}
+
+	#likes {
+		background: url('../img/content-2-landscape.png');
+		background-size: 100% 100%;
+	}
+
+	#projects {
+		background: url('../img/content-3-landscape.png');
+		background-size: 100% 100%;
+		padding-bottom: 2em;
+		height: auto;
+	}
+
+	#contact {
+		background: url('../img/content-4-landscape.png');
+		background-size: 100% 100%;
+	}
+}
+
+@media only screen and (min-width: 1440px) {
 }
