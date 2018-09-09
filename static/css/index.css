@@ -51,6 +51,7 @@ AI-------------------------------------------------------------------
 }
 
 #contact {
+	padding-top: 7em;
 	background: url('../img/content-4-portrait.png');
 	background-size: 100% 100%;
 }
@@ -183,8 +184,9 @@ Media Queries for Responsive Design
 		padding-top: 4em;
 	}
 	#about {
-	background: url('../img/content-landscape.png');
-	background-size: 100% 100%;
+		padding-top: 6em;
+		background: url('../img/content-landscape.png');
+		background-size: 100% 100%;
 	}
 
 	#likes {
