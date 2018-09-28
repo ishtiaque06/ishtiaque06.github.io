@@ -18,12 +18,12 @@ section {
 	text-align: center;
 	padding-top: 5em;
 	padding-bottom: 3em;
-	padding-left: 3.5em;
-	padding-right: 3.5em;
+	padding-left: 4em;
+	padding-right: 4em;
 	box-shadow: 0 0 5px black;
 	height: 100vh;
 	color: #1f7e92;
-	overflow: auto;
+	overflow: all;
 }
 
 

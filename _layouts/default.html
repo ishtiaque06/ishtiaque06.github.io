@@ -17,8 +17,8 @@
 		<!--AI==========================================================
 			My custom CSS
 		===========================================================AI-->
-		<link rel="stylesheet" href="../static/css/default.css">
-		<link rel="stylesheet" href="../static/css/index.css">
+		<link rel="stylesheet" href="{{ site.baseurl }}/static/css/default.css">
+		<link rel="stylesheet" href="{{ site.baseurl }}/static/css/index.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" 
 		rel="stylesheet">
 
@@ -55,10 +55,10 @@
   					<a href="/" class="navbar-link">Home</a>
   				</div>
   				<div class="navbar-list-item float-right">
-  					<a href="../static/files/Ahmed_Ishtiaque_9_17_2018_Resume.pdf" class="navbar-link">Resume</a>
+  					<a href="{{ site.baseurl }}/static/files/Ahmed-Ishtiaque-Resume.pdf" class="navbar-link">Resume</a>
   				</div>
   				<div class="navbar-list-item float-right">
-  					<a href="#" class="navbar-link">Interests</a>
+  					<a href="{{site.baseurl}}/posts" class="navbar-link">Blog</a>
   				</div>
   			</div>
   			<div id="sm-navbar-list">
@@ -66,10 +66,10 @@
   					<a href="/" class="sm-navbar-link">Home</a>
   				</div>
   				<div class="sm-navbar-list-item">
-  					<a href="../static/files/Ahmed_Ishtiaque_9_17_2018_Resume.pdf" class="sm-navbar-link">Resume</a>
+  					<a href="{{ site.baseurl }}/static/files/Ahmed-Ishtiaque-Resume.pdf" class="sm-navbar-link">Resume</a>
   				</div>
   				<div class="sm-navbar-list-item">
-  					<a href="#" class="sm-navbar-link">Interests</a>
+  					<a href="{{site.baseurl}}/posts" class="sm-navbar-link">Blog</a>
   				</div>
   			</div>
 
@@ -103,6 +103,6 @@
 		<!--AI==========================================================
 			My custom JS files
 		===========================================================AI-->
-		<script src="../static/js/default.js"></script>
+		<script src="{{ site.baseurl }}/static/js/default.js"></script>
 	</body>
 </html>
