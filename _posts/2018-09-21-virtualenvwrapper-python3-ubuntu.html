@@ -3,8 +3,102 @@ layout: default
 title: How to setup virtualenvwrapper using Python3 in Ubuntu
 date: 2018-09-21 11:24:00 -0400
 ---
-<section>
-	<div class="section-desc">
-		Hello!
+<section id="projects">
+	<div class="heading left">
+		How to "Properly" install Python 3 Virtual Environment Wrapper in Ubuntu 18.04 LTS
+	</div>
+	<div class="subheading left"><i>September 20th, 2018</i></div>
+	<div class="section-desc left">
+		<div class="section-desc">
+			<div class="subheading">
+				<b>The What:</b>
+				<div class="section-desc">
+					<p>Virtual Environment Wrapper, most commonly known as 
+					<a class="page-link" href="https://virtualenvwrapper.readthedocs.io/en/latest/">
+						virtualenvwrapper,</a>is a nifty tool that you, as a Python developer, 
+					can use to organize your virtual development environments. 
+					With this powerful tool, you can create, list, manage and switch
+					between your development environment with ease.</p>
+				</div>
+			</div>
+		</div>
+		<div class="section-desc">
+			<div class="subheading">
+				<b>The Why:</b>
+			</div>
+				<div class="section-desc">
+					<p>While trying to install virtualenvwrapper on my new Kubuntu 
+						18.04LTS distro, I noticed that following the usual 
+						instructions on virtualenvwrapper's <a class="page-link" href="https://virtualenvwrapper.readthedocs.io/en/latest/install.html">Read the Docs page</a>doesn't exactly prove to be useful in installing 
+						virtualenvwrapper. It took me an hour to figure out how to 
+						install virtualenvwrapper so that it's full functional. Thus
+						this small article was born.
+				</div>
+		</div>
+		<div class="section-desc">
+			<div class="subheading">
+				<b>The How:</b>
+			</div>
+				<div class="section-desc">
+					Without further ado, let's jump into how I installed 
+					virtualenvwrapper on my Kubuntu system running Python 3. 
+					<b>Note:</b> The instructions here are for Python 3, but 
+					they may work for Python 2 environments as well. 
+					<ul>
+						<li><b>Step 1:</b> Check and install pip3. To check if you have
+							pip3 installed, open up a terminal (Ctrl+Alt+T should
+							do the trick) and type <br/>
+								<code>&nbsp&nbsp&nbsppip3 --version</code><br/>
+							You should see something similar to this:<br/>
+								<code>&nbsp&nbsp&nbsppip 9.0.1 from /usr/lib/python3/dist-packages (python 3.6)</code><br/>
+							If pip3 is not install, you can easily install it by 
+							entering<br/>
+								<code>&nbsp&nbsp&nbspsudo apt-get install python3-pip</code><br/>
+							on your terminal.<p/>
+						</li>
+						<li>
+							<b>Step 2:</b> Install virtualenvwrapper:<br/>
+								<code>&nbsp&nbsp&nbspsudo pip3 install virtualenvwrapper</code><br/>
+							<b>Note:</b> Usually you wouldn't install pip packages globally,
+							but it's much easier if you install virtualenvwrapper globally
+							due to its dependencies being set up a certain way that makes
+							global installation easier.<p/>
+						</li>
+						<li>
+							<b>Step 3:</b> Add the following lines to your ~/.bashrc file:<br/>
+								<code>&nbsp&nbsp&nbspexport WORKON_HOME=$HOME/.virtualenvs</code><br/>
+								<code>&nbsp&nbsp&nbspexport PROJECT_HOME=$HOME/Devel</code><br/>
+								<code>&nbsp&nbsp&nbspsource /usr/local/bin/virtualenvwrapper.sh</code><br/>
+								<code>&nbsp&nbsp&nbspVIRTUALENVWRAPPER_PYTHON=/usr/bin/python3</code><br/>
+							Once you do that, you should be all set to proceed to the next step.
+						</li><p/>
+						<li>
+							<b>Step 4:</b> Now it's the moment of truth. type<br/>
+								<code>&nbsp&nbsp&nbspsource ~/.bashrc</code><br/>
+							to finish the setup. If all goes well, you should not see any 
+							errors. After you're done, enter<br/>
+								<code>&nbsp&nbsp&nbspworkon</code><br/>
+							If you don't see anything, that means your command works 
+							but you don't have a virtualenv yet. So let's go ahead and make one.
+						</li><p/>
+						<li>
+							<b>Step 5:</b> Make a test virtual environment<br/>
+								<code>&nbsp&nbsp&nbspmkvirtualenv test</code><br/>
+							The output should be similar to this:<br/>
+							<code>&nbsp&nbsp&nbspUsing base prefix '/usr'</code><br/>
+							<code>&nbsp&nbsp&nbspNew python executable in /home/aishtiaque/.virtualenvs/test/bin/python3</code><br/>
+							<code>&nbsp&nbsp&nbspAlso creating executable in /home/aishtiaque/.virtualenvs/test/bin/python</code><br/>
+							<code>&nbsp&nbsp&nbspInstalling setuptools, pip, wheel...done.</code><br/>
+							<code>&nbsp&nbsp&nbsp(test) user@computer:~$</code><br/>
+							And you are in the new virtualenv! Check to see if pip 
+							has the right packages:<br/>
+							<code>&nbsp&nbsp&nbsppip freeze</code><br/>
+							shouldn't give you any output.
+						</li><p/>
+					</ul>
+					Voila! You should be all set now. You can head over to 
+					virtualenvwrapper's documentation for details on its commands.
+				</div>
+		</div>
 	</div>
 </section>

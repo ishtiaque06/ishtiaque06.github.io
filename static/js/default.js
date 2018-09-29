@@ -71,7 +71,7 @@ function shrinkNavMenu() {
   var scrollTop = $window.scrollTop();
   if (scrollTop >= 100) {
     stock_nav.animate({
-      height: '2em',
+      height: '2rem',
       backgroundColor: 'rgba(0, 0, 0, 0.2)',
     }, function() {
       var html = $('html');
@@ -83,7 +83,7 @@ function shrinkNavMenu() {
   }
   else {
     stock_nav.animate({
-      height: '4em',
+      height: '4rem',
       backgroundColor: 'rgba(0, 0, 0, 0.2)',
     }, function() {
       var html = $('html');
@@ -141,7 +141,7 @@ function navBarHeightAdjuster() {
       stock_nav.addClass('scrolled-nav');
     } else if (scrollTop < 100) {
       stock_nav.removeClass('scrolled-nav');
-      stock_nav.css('height', '4em');
+      stock_nav.css('height', '4rem');
     } 
   });
 }

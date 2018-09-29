@@ -1,5 +1,30 @@
-/*Settings for the list of posts page*/
+/*
+AI-------------------------------------------------------------------
+	Color palette
 
+	Red: #ff3B3f
+	Off-white: #fbffe6
+	Green: #1f7e92
+	Green darker: #165a68
+-------------------------------------------------------------------AI
+*/
+/*Settings for posts page on blog*/
+
+.page-link {
+	color: #165a68;
+	background: transparent;
+	border: none;
+	padding-left: 0;
+	transition-duration: 1.0s;
+	display: inline;
+}
+
+.page-link:hover {
+	background: transparent;
+	color: #ff3B3f;
+	text-decoration: underline;
+}
 .left {
+	padding-left: 1.5rem !important;
 	text-align: left;
 }

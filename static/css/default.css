@@ -23,8 +23,8 @@ AI-------------------------------------------------------------------
 	position: fixed;
 	top: 0;
 	z-index: 10000;
-	height: 4em;
-	line-height: 4em;
+	height: 4rem;
+	line-height: 4rem;
 	width: 100vw;
 	-webkit-transition: height .5s, line-height .5s; /* Safari */
     transition: height .5s, line-height .5s;
@@ -33,13 +33,13 @@ AI-------------------------------------------------------------------
 
 /*When the user scrolls 100px, this class is added to the NavBar.*/
 .scrolled-nav {
-	height: 3em!important;
-	line-height: 3em!important;
+	height: 3rem!important;
+	line-height: 3rem!important;
 }
 
 /*Each link in the scrolled nav has this font size.*/
 .scrolled-nav .navbar-list-item {
-	font-size: 0.8em;
+	font-size: 0.8rem;
 }
 
 /*
@@ -49,11 +49,11 @@ AI-------------------------------------------------------------------
 -------------------------------------------------------------------AI
 */
 .navbar-list-item {
-	font-size: 1em;
+	font-size: 1rem;
 	text-align: left;
 	display: inline-block;
-	padding-left: 2em;
-	padding-right: 2em;
+	padding-left: 2rem;
+	padding-right: 2rem;
 }
 
 /*The following is style settings for CSS underline on nav links upon hover*/
@@ -73,6 +73,8 @@ AI-------------------------------------------------------------------
 }
 
 .navbar-link {
+	font-size: 1.2rem;
+	font-weight: bold;
 	color: white;
 	text-decoration: none;
 	transition: 0.5s;
@@ -86,6 +88,7 @@ AI-------------------------------------------------------------------
 }
 
 .navbar-link:hover {
+	font-weight: bold;
 	text-decoration: none;
 	color: white;
 }
@@ -162,34 +165,6 @@ Media Queries for Responsive Design
 
 @media only screen and (max-width: 376px) {
 	body {
-		font-size: 12px;
-	}
-
-	#navbar-list {
-		display: none;
-	}
-
-	.svg-container {
-		display: block!important;
-	}
-}
-
-@media only screen and (max-width: 376px) and (min-height: 730px) {
-	body {
-		font-size: 15px;
-	}
-
-	#navbar-list {
-		display: none;
-	}
-
-	.svg-container {
-		display: block!important;
-	}
-}
-
-@media only screen and (min-width: 376px) and (max-width: 425px) {
-	body {
 		font-size: 13px;
 	}
 
@@ -200,11 +175,65 @@ Media Queries for Responsive Design
 	.svg-container {
 		display: block!important;
 	}
+	#projects {
+		height: auto;
+	}
+}
+
+@media only screen and (max-width: 376px) and (min-height: 730px) {
+	body {
+		font-size: 14px;
+	}
+
+	#navbar-list {
+		display: none;
+	}
+
+	.svg-container {
+		display: block!important;
+	}
+
+	#projects {
+		height: auto;
+	}
+}
+
+@media only screen and (min-width: 376px) and (max-width: 425px) {
+	body {
+		font-size: 14px;
+	}
+
+	#navbar-list {
+		display: none;
+	}
+
+	.svg-container {
+		display: block!important;
+	}
+
+	#projects {
+		height: auto;
+	}
+
+	.heading {
+	padding: 0.5rem 0.5rem 0.5em 0.5rem;
+	font-size: 2.5rem;
+	}
+
+	.subheading {
+	padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+	font-size: 1.5rem;
+	}
+
+	.section-desc {
+	padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+	font-size: 1rem;
+	}
 }
 
 @media only screen and (min-width: 425px) and (max-width: 549px) {
 	body {
-		font-size: 14px;
+		font-size: 15px;
 	}
 	#navbar-list {
 		display: none;
@@ -212,6 +241,10 @@ Media Queries for Responsive Design
 
 	.svg-container {
 		display: block!important;
+	}
+
+	#projects {
+		height: auto;
 	}
 }
 
@@ -226,7 +259,11 @@ Media Queries for Responsive Design
 		display: none;
 	}
 	body {
-		font-size: 16px;
+		font-size: 14px;
+	}
+
+	#projects {
+		height: auto;
 	}
 }
 
@@ -243,18 +280,18 @@ Media Queries for Responsive Design
 		display: inline-block!important;
 	}
 	body {
-		font-size: 20px;
+		font-size: 14px;
 	}
 }
 
 @media only screen and (min-width: 1024px) {
 	body {
-		font-size: 20px;
+		font-size: 14px;
 	}
 }
 
 @media only screen and (min-width: 1440px) {
-	body {
-		font-size: 24px;
+	html {
+		font-size: 20px;
 	}
 }

@@ -46,12 +46,12 @@ AI-------------------------------------------------------------------
 #projects {
 	background: url('../img/content-3-portrait.png');
 	background-size: 100% 100%;
-	padding-bottom: 2em;
-	height: auto;
+	padding-bottom: 2rem;
+	min-height: 100vh;
 }
 
 #contact {
-	padding-top: 7em;
+	padding-top: 7rem;
 	background: url('../img/content-4-portrait.png');
 	background-size: 100% 100%;
 }
@@ -62,21 +62,18 @@ AI-------------------------------------------------------------------
 -------------------------------------------------------------------AI
 */
 .heading {
-	padding-top: 0.2em;
-	padding-bottom: 0.2em;
-	font-size: 2.5em;
+	padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+	font-size: 2rem;
 }
 
 .subheading {
-	padding-top: 0.2em;
-	padding-bottom: 0.2em;
-	font-size: 1.8em;
+	padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+	font-size: 1.5rem;
 }
 
 .section-desc {
-	padding-top: 0.2em;
-	padding-bottom: 0.2em;
-	font-size: 1.2em;
+	padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+	font-size: 1rem;
 }
 
 /*
@@ -131,8 +128,8 @@ AI-------------------------------------------------------------------
 }
 
 .links-out {
-	padding-left: 0.5em;
-	padding-right: 0.5em;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 	text-align: center;
 }
 
@@ -142,7 +139,7 @@ AI-------------------------------------------------------------------
 }
 
 .fa-envelope {
-	padding-top: 0.1em;
+	padding-top: 0.1rem;
 }
 
 .fab:hover, .fas:hover {
@@ -158,8 +155,8 @@ Media Queries for Responsive Design
 /*For phones with a narrow but long viewport*/
 @media only screen and (max-width: 376px) and (min-height: 730px) {
 	section {
-		padding-right: 3.5em;
-		padding-left: 3.5em;
+		padding-right: 3.5rem;
+		padding-left: 3.5rem;
 	}
 }
 
@@ -171,8 +168,8 @@ Media Queries for Responsive Design
 
 @media only screen and (min-width: 550px) and (max-width: 768px) {
 	section {
-		padding-right: 4em;
-		padding-left: 4em;
+		padding-right: 4rem;
+		padding-left: 4rem;
 	}
 }
 
@@ -181,10 +178,10 @@ Media Queries for Responsive Design
 
 @media only screen and (min-width: 1024px) {
 	section {
-		padding-top: 4em;
+		padding-top: 4rem;
 	}
 	#about {
-		padding-top: 6em;
+		padding-top: 6rem;
 		background: url('../img/content-landscape.png');
 		background-size: 100% 100%;
 	}
@@ -197,7 +194,7 @@ Media Queries for Responsive Design
 	#projects {
 		background: url('../img/content-3-landscape.png');
 		background-size: 100% 100%;
-		padding-bottom: 2em;
+		padding-bottom: 2rem;
 		height: auto;
 	}
 
@@ -208,4 +205,18 @@ Media Queries for Responsive Design
 }
 
 @media only screen and (min-width: 1440px) {
+	.heading {
+	padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+	font-size: 2.5rem;
+	}
+
+	.subheading {
+	padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+	font-size: 1.5rem;
+	}
+
+	.section-desc {
+	padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+	font-size: 1rem;
+	}
 }
