@@ -51,25 +51,23 @@ date: 2018-09-21 11:24:00 -0400
 								<code>&nbsp&nbsp&nbsppip3 --version</code><br/>
 							You should see something similar to this:<br/>
 								<code>&nbsp&nbsp&nbsppip 9.0.1 from /usr/lib/python3/dist-packages (python 3.6)</code><br/>
-							If pip3 is not install, you can easily install it by 
+							If pip3 is not installed, you can easily install it by 
 							entering<br/>
 								<code>&nbsp&nbsp&nbspsudo apt-get install python3-pip</code><br/>
 							on your terminal.<p/>
 						</li>
 						<li>
 							<b>Step 2:</b> Install virtualenvwrapper:<br/>
-								<code>&nbsp&nbsp&nbspsudo pip3 install virtualenvwrapper</code><br/>
-							<b>Note:</b> Usually you wouldn't install pip packages globally,
-							but it's much easier if you install virtualenvwrapper globally
-							due to its dependencies being set up a certain way that makes
-							global installation easier.<p/>
+								<code>&nbsp&nbsp&nbsppip3 install virtualenvwrapper</code><br/>
+							<p/>
 						</li>
 						<li>
 							<b>Step 3:</b> Add the following lines to your ~/.bashrc file:<br/>
 								<code>&nbsp&nbsp&nbspexport WORKON_HOME=$HOME/.virtualenvs</code><br/>
 								<code>&nbsp&nbsp&nbspexport PROJECT_HOME=$HOME/Devel</code><br/>
-								<code>&nbsp&nbsp&nbspsource /usr/local/bin/virtualenvwrapper.sh</code><br/>
+								<code>&nbsp&nbsp&nbspsource ~/.local/bin/virtualenvwrapper.sh</code><br/>
 								<code>&nbsp&nbsp&nbspVIRTUALENVWRAPPER_PYTHON=/usr/bin/python3</code><br/>
+							<code>&nbsp&nbsp&nbspPATH=$PATH:~/.local/bin</code><br/>
 							Once you do that, you should be all set to proceed to the next step.
 						</li><p/>
 						<li>
