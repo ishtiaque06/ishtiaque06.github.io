@@ -16,14 +16,16 @@ AI-------------------------------------------------------------------
 section {
 	background: #fbffe6;
 	text-align: center;
-	padding-top: 5em;
-	padding-bottom: 3em;
-	padding-left: 4em;
-	padding-right: 4em;
+	padding-left: 5em;
+	padding-right: 5em;
 	box-shadow: 0 0 5px black;
 	height: 100vh;
 	color: #1f7e92;
 	overflow: all;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
 
@@ -51,7 +53,6 @@ AI-------------------------------------------------------------------
 }
 
 #contact {
-	padding-top: 7rem;
 	background: url('../img/content-4-portrait.png');
 	background-size: 100% 100%;
 }
@@ -178,10 +179,11 @@ Media Queries for Responsive Design
 
 @media only screen and (min-width: 1024px) {
 	section {
-		padding-top: 4rem;
+		padding-right: 6rem;
+		padding-left: 6rem;
 	}
 	#about {
-		padding-top: 6rem;
+		/* padding-top: 6rem; */
 		background: url('../img/content-landscape.png');
 		background-size: 100% 100%;
 	}

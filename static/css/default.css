@@ -13,6 +13,14 @@ body {
 	margin: 0px;
 }
 
+p {
+	line-height: 1.5rem;
+}
+
+a {
+	text-decoration: none;
+}
+
 /*
 AI-------------------------------------------------------------------
 	NavBar Styles
@@ -317,18 +325,18 @@ Media Queries for Responsive Design
 		display: inline-block!important;
 	}
 	body {
-		font-size: 14px;
+		font-size: 16px;
 	}
 }
 
 @media only screen and (min-width: 1024px) {
 	body {
-		font-size: 14px;
+		font-size: 18px;
 	}
 }
 
 @media only screen and (min-width: 1440px) {
 	html {
-		font-size: 20px;
+		font-size: 25px;
 	}
 }
