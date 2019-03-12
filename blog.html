@@ -1,8 +1,8 @@
 ---
 layout: default
-title: My Blog
+title: My Blog | Ahmed Ishtiaque
 ---
-<section id="projects">
+<!-- <section id="projects">
 	<div class="heading">Welcome to my Digital Scribbles</div>
 	<div class="subheading left">
 		<a class="page-link" href = "{{ site.baseurl }}{% post_url 2018-09-21-virtualenvwrapper-python3-ubuntu %}"><b>How to "Properly" Install Python 3 Virtual Environment Wrapper on Ubuntu 18.04</b></a>
@@ -10,4 +10,16 @@ title: My Blog
 	<div class="section-desc left">
 		<i>September 20th, 2018</i>
 	</div>
+</section> -->
+
+<section id="blog-main">
+  <div class="heading">Latest Posts</div>
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt }}</p>
+      </li>
+    {% endfor %}
+  </ul>
 </section>

@@ -15,9 +15,8 @@ AI-------------------------------------------------------------------
 */
 section {
 	background: #fbffe6;
-	text-align: center;
-	padding-left: 5em;
-	padding-right: 5em;
+	padding-left: 10em;
+	padding-right: 10em;
 	box-shadow: 0 0 5px black;
 	height: 100vh;
 	color: #1f7e92;
@@ -50,6 +49,7 @@ AI-------------------------------------------------------------------
 	background-size: 100% 100%;
 	padding-bottom: 2rem;
 	min-height: 100vh;
+	padding-top: 4rem
 }
 
 #contact {
@@ -165,12 +165,16 @@ Media Queries for Responsive Design
 }
 
 @media only screen and (min-width: 425px) and (max-width: 549px) {
+	section {
+		padding-right: 4rem;
+		padding-left: 4rem;
+	}
 }
 
 @media only screen and (min-width: 550px) and (max-width: 768px) {
 	section {
-		padding-right: 4rem;
-		padding-left: 4rem;
+		padding-right: 8rem;
+		padding-left: 8rem;
 	}
 }
 
@@ -179,8 +183,8 @@ Media Queries for Responsive Design
 
 @media only screen and (min-width: 1024px) {
 	section {
-		padding-right: 6rem;
-		padding-left: 6rem;
+		padding-right: 10rem;
+		padding-left: 10rem;
 	}
 	#about {
 		/* padding-top: 6rem; */
