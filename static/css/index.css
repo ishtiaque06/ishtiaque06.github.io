@@ -154,20 +154,28 @@ Media Queries for Responsive Design
 */
 
 /*For phones with a narrow but long viewport*/
-@media only screen and (max-width: 376px) and (min-height: 730px) {
+@media only screen and (max-width: 376px) and (min-height: 600px) {
 	section {
 		padding-right: 3.5rem;
 		padding-left: 3.5rem;
+		text-align: center;
+	}
+
+}
+
+@media only screen and (max-width: 376px) {
+	section {
+		padding-left: 3rem;
+		padding-right: 3rem;
+		text-align: center;
 	}
 }
 
-@media only screen and (min-width: 376px) and (max-width: 425px) {
-}
-
-@media only screen and (min-width: 425px) and (max-width: 549px) {
+@media only screen and (min-width: 376px) and (max-width: 549px) {
 	section {
 		padding-right: 4rem;
 		padding-left: 4rem;
+		text-align: center;
 	}
 }
 
