@@ -10,6 +10,15 @@ AI-------------------------------------------------------------------
 
 body {
 	font-family: 'Montserrat', sans-serif;
+	margin: 0px;
+}
+
+p {
+	line-height: 1.5rem;
+}
+
+a {
+	text-decoration: none;
 }
 
 /*
@@ -29,6 +38,8 @@ AI-------------------------------------------------------------------
 	-webkit-transition: height .5s, line-height .5s; /* Safari */
     transition: height .5s, line-height .5s;
 	background: rgba(0, 0, 0, 0.2);
+	display: flex;
+	align-items: center;
 }
 
 /*When the user scrolls 100px, this class is added to the NavBar.*/
@@ -44,7 +55,7 @@ AI-------------------------------------------------------------------
 
 /*
 AI-------------------------------------------------------------------
-	For viewports greater than 786px, these classes apply on the 
+	For viewports greater than 786px, these classes apply on the
 	NavBar.
 -------------------------------------------------------------------AI
 */
@@ -78,7 +89,7 @@ AI-------------------------------------------------------------------
 	color: white;
 	text-decoration: none;
 	transition: 0.5s;
-	position: relative;	
+	position: relative;
 }
 
 .navbar-link:hover:before {
@@ -109,11 +120,9 @@ AI-------------------------------------------------------------------
 /*Hamburger SVG settings.*/
 #hamburger {
 	fill: #fbffe6;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	margin-left: 20px;
 	transition: 0.5s;
 	font-size: 5em;
+	margin-left: 7px;
 }
 
 .sm-navbar-list-item {
@@ -141,7 +150,7 @@ AI-------------------------------------------------------------------
 	color: #fbffe6;
 	text-decoration: none;
 	transition: 0.5s;
-	position: relative;	
+	position: relative;
 }
 
 .sm-navbar-link:hover:before {
@@ -164,7 +173,7 @@ Media Queries for Responsive Design
 */
 
 @media only screen and (max-width: 376px) {
-	body {
+	html {
 		font-size: 13px;
 	}
 
@@ -172,8 +181,13 @@ Media Queries for Responsive Design
 		display: none;
 	}
 
+	#stock-nav {
+		display: block;
+	}
+
 	.svg-container {
-		display: block!important;
+		display: flex;
+		align-items: center;
 	}
 	#projects {
 		height: auto;
@@ -181,8 +195,12 @@ Media Queries for Responsive Design
 }
 
 @media only screen and (max-width: 376px) and (min-height: 730px) {
-	body {
+	html {
 		font-size: 14px;
+	}
+
+	#stock-nav {
+		display: block;
 	}
 
 	#navbar-list {
@@ -190,7 +208,8 @@ Media Queries for Responsive Design
 	}
 
 	.svg-container {
-		display: block!important;
+		display: flex;
+		align-items: center;
 	}
 
 	#projects {
@@ -199,8 +218,12 @@ Media Queries for Responsive Design
 }
 
 @media only screen and (min-width: 376px) and (max-width: 425px) {
-	body {
+	html {
 		font-size: 14px;
+	}
+
+	#stock-nav {
+		display: block;
 	}
 
 	#navbar-list {
@@ -208,7 +231,8 @@ Media Queries for Responsive Design
 	}
 
 	.svg-container {
-		display: block!important;
+		display: flex;
+		align-items: center;
 	}
 
 	#projects {
@@ -232,15 +256,21 @@ Media Queries for Responsive Design
 }
 
 @media only screen and (min-width: 425px) and (max-width: 549px) {
-	body {
+	html {
 		font-size: 15px;
 	}
+
+	#stock-nav {
+		display: block;
+	}
+
 	#navbar-list {
 		display: none;
 	}
 
 	.svg-container {
-		display: block!important;
+		display: flex;
+		align-items: center;
 	}
 
 	#projects {
@@ -252,13 +282,11 @@ Media Queries for Responsive Design
 	#navbar-list {
 		display: none;
 	}
-	.svg-container {
-		display: block!important;
-	}
+
 	#sm-navbar-list {
 		display: none;
 	}
-	body {
+	html {
 		font-size: 14px;
 	}
 
@@ -267,7 +295,24 @@ Media Queries for Responsive Design
 	}
 }
 
+@media only screen and (max-width: 768px) {
+
+		#stock-nav {
+			display: flex;
+			align-items: center;
+		}
+
+		.svg-container {
+			display: flex;
+			align-items: center;
+		}
+}
+
 @media only screen and (min-width: 769px) {
+	#stock-nav {
+		justify-content: center;
+	}
+
 	.svg-container {
 		display: none;
 	}
@@ -279,14 +324,14 @@ Media Queries for Responsive Design
 	#navbar-list {
 		display: inline-block!important;
 	}
-	body {
-		font-size: 14px;
+	html {
+		font-size: 16px;
 	}
 }
 
 @media only screen and (min-width: 1024px) {
-	body {
-		font-size: 14px;
+	html {
+		font-size: 18px;
 	}
 }
 

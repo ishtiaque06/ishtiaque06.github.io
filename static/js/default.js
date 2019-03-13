@@ -1,7 +1,7 @@
 /*
 AI-------------------------------------------------------------------
   Default.js Map:
-  
+
   Section 0: Variables for caching selectors.
   Section 1: Functions to be called by other functions.
   Section 2: Functions executed right after the DOM becomes ready.
@@ -18,12 +18,15 @@ AI-------------------------------------------------------------------
 // This selects the NavBar to shrink it.
 var stock_nav = $('#stock-nav');
 
-// This selects the list of links that comes up when the NavBar 
+// This selects the list of links that comes up when the NavBar
 // hamburger is pressed on mobile devices
 var sm_navbar_list = $('#sm-navbar-list');
 
 // This selects the window jquery object.
 var $window = $(window);
+
+// select hamburger to adjust its positioning
+var $hamburger = document.getElementById('hamburger');
 
 
 
@@ -35,12 +38,15 @@ AI-------------------------------------------------------------------
 
 /*
 AI-------------------------------------------------------------------
-      On smaller devices, this function expands the navigation menu. 
-      It also locks the viewport so the user can't scroll before 
+      On smaller devices, this function expands the navigation menu.
+      It also locks the viewport so the user can't scroll before
       getting out of the menu.
 -------------------------------------------------------------------AI
 */
 function expandNavMenu() {
+  var rect = $hamburger.getBoundingClientRect();
+  $hamburger.style.position = "absolute";
+  $hamburger.style.top = rect.top;
   stock_nav.animate({
     backgroundColor: 'rgba(31, 126, 146, 0.9)',
     height: '100vh',
@@ -61,8 +67,8 @@ function expandNavMenu() {
 
 /*
 AI-------------------------------------------------------------------
-  On small devices, this packs up the expanded navigation. 
-  Then it undoes the scroll-lock that is activated by expandNavMenu 
+  On small devices, this packs up the expanded navigation.
+  Then it undoes the scroll-lock that is activated by expandNavMenu
   above.
 -------------------------------------------------------------------AI
 */
@@ -92,7 +98,7 @@ function shrinkNavMenu() {
       window.scrollTo(scrollPosition[0], scrollPosition[1]);
     });
   }
-  
+
 }
 
 /*
@@ -142,7 +148,7 @@ function navBarHeightAdjuster() {
     } else if (scrollTop < 100) {
       stock_nav.removeClass('scrolled-nav');
       stock_nav.css('height', '4rem');
-    } 
+    }
   });
 }
 
